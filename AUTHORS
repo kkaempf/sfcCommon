@@ -1,0 +1,13 @@
+This package has been derived from the sfcb and sfcc packages.
+
+Core developers are or have been:
+ Gareth S Bestor
+ Chris Buccella
+ Michael Chase-Salerno
+ Tyrel Datwyler
+ Sven Schuetz
+ Sean Swehla
+ Viktor Mihajlovski
+
+Keith Pomakis has kindly granted the use of his hashtable and generic list
+functions.

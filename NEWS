@@ -1,0 +1,7 @@
+Changes in 1.0.0
+================
+
+New features:
+- 3177587: Initial package creation with sfcUtil functions
+
+Bugs fixed:

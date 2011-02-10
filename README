@@ -1,0 +1,7 @@
+            ------------------------------
+                sfcCommon package
+            ------------------------------
+
+
+This package provides a common library for functions 
+shared between sfcb and sfcc.
