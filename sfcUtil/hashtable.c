@@ -122,11 +122,6 @@ HashTableCreate(long numOfBuckets)
  *      <nothing>
 \*--------------------------------------------------------------------------*/
 
-void mcs ()
-{
-  return;
-}
-
 static void
 HashTableDestroy(HashTable * hashTable)
 {

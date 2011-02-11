@@ -62,8 +62,6 @@ struct _HashTableIterator {
 };
 typedef struct _HashTableIterator HashTableIterator;
 
-void mcs();
-
 #endif                          /* _HASHTABLE_H */
 /* MODELINES */
 /* DO NOT EDIT BELOW THIS COMMENT */
