@@ -69,102 +69,25 @@ extern          "C" {
                     (UtilHashTable * ht, int buckets);
 
     HashTableIterator *(*getFirst)
-                    (UtilHashTable * ht, void **key, void **value);
+        (UtilHashTable * ht, void **key, void **value);
+
     HashTableIterator *(*getNext)
-
-
-     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         (UtilHashTable * ht, HashTableIterator * iterator, void **key,
          void **value);
 
-    void            (*setKeyCmpFunction)
-
-     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    void (*setKeyCmpFunction)
         (UtilHashTable * ht,
          int (*keycomp) (const void *k1, const void *k2));
-    void            (*setValueCmpFunction)
 
-     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    void (*setValueCmpFunction)
         (UtilHashTable * ht,
          int (*keycomp) (const void *v1, const void *v2));
-    void            (*setHashFunction)
 
-     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    void (*setHashFunction)
         (UtilHashTable * ht,
          unsigned long (*hashFunction) (const void *key));
-    void            (*setReleaseFunctions)
 
-     
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+    void (*setReleaseFunctions)
         (UtilHashTable * ht, void (*keyRelease) (void *key),
          void (*valueRelease) (void *value));
   };
