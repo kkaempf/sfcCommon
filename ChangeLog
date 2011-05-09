@@ -1,3 +1,11 @@
+2011-05-09  Chris Buccella  <buccella@linux.vnet.ibm.com>
+
+	* Makefile.am, configure.ac, sfcUtil/utilFactory.c, 
+	  sfcUtil/utilHashtable.c, sfcUtil/utilft.h, 
+	  genericlist.c, genericlist.c:
+	added genericlist.* and made newList() take arguments to
+	specify memory management functions
+
 2011-02-10 Michael Chase-Salerno <bratac@linux.vnet.ibm.com>
 
 	* All files
