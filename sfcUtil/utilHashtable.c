@@ -112,7 +112,6 @@ newHashTableDefault(long buckets)
 {
   UtilHashTable  *ht = (UtilHashTable *) malloc(sizeof(UtilHashTable));
   void           *t = HashTableCreate(buckets);
-printf("MCS common\n");
   ht->hdl = t;
   ht->ft = UtilHashTableFT;
 
@@ -131,8 +130,6 @@ newHashTable(long buckets, long opt)
   void           *t = HashTableCreate(buckets);
   void            (*keyRelease) (void *key) = NULL;
   void            (*valueRelease) (void *value) = NULL;
-
-printf("MCS common\n");
 
   ht->hdl = t;
   ht->ft = UtilHashTableFT;

@@ -115,6 +115,8 @@ extern          "C" {
     int             version;
     void            (*release)
                     (UtilList * ul);
+    void            (*memUnlink)
+                    (int i);
     UtilList       *(*clone)
                     (UtilList * ul);
     void            (*clear)

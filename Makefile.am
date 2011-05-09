@@ -42,6 +42,7 @@ sfcCommonlib_LTLIBRARIES = \
    libsfcUtil.la 
 
 libsfcUtil_la_SOURCES = \
+        sfcUtil/genericlist.c \
 	sfcUtil/hashtable.c \
 	sfcUtil/utilFactory.c \
 	sfcUtil/utilHashtable.c \
@@ -49,7 +50,7 @@ libsfcUtil_la_SOURCES = \
 	sfcUtil/libsfcUtil.Versions
 libsfcUtil_la_LDFLAGS = -Wl,--version-script,$(srcdir)/sfcUtil/libsfcUtil.Versions
 
-inst_HEADERS= sfcUtil/hashtable.h sfcUtil/utilft.h 
+inst_HEADERS= sfcUtil/hashtable.h sfcUtil/utilft.h sfcUtil/genericlist.h
 
 pretty:
 	for i in `find $(srcdir) -name \*.[ch]`; do \

@@ -24,10 +24,11 @@
 #include <stdlib.h>
 #include <ctype.h>
 #include <string.h>
+#include "genericlist.h"
 
 extern UtilHashTable *newHashTable(long buckets, long opt);
 extern UtilHashTable *newHashTableDefault(long buckets);
-extern UtilList *newList();
+extern UtilList *newList(); /*  coming from genericlist */
 extern UtilStringBuffer *newStringBuffer(int s);
 
 static Util_Factory_FT ift = {
