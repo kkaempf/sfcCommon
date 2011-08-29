@@ -537,6 +537,8 @@ copy_list(Generic_list list)
 /****************************************************************************/
 /****************************************************************************/
 
+#define GENERIC_LIST_HEAD(ul) *((Generic_list *)ul)
+
 static void    *
 emalloc(unsigned int n)
 {
@@ -553,7 +555,7 @@ emalloc(unsigned int n)
 static void
 listRelease(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   destroy_list(&l);
   if (ul->ft->memUnlink)  ul->ft->memUnlink(ul->mem_state);
   free(ul);
@@ -562,7 +564,7 @@ listRelease(UtilList * ul)
 static UtilList *
 listClone(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   UtilList       *nul = NEW(UtilList);
   *nul = *ul;
   nul->hdl = copy_list(l).info;
@@ -572,56 +574,56 @@ listClone(UtilList * ul)
 static void
 listClear(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   remove_all(l);
 }
 
 static unsigned long
 listSize(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return num_of_objects(l);
 }
 
 static int
 listIsEmpty(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return is_empty(l);
 }
 
 static int
 listContains(UtilList * ul, const void *elm)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return is_in_list(l, elm);
 }
 
 static void
 listAppend(UtilList * ul, const void *elm)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   add_to_end(l, (void *) elm);
 }
 
 static void
 listPrepend(UtilList * ul, const void *elm)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   add_to_beginning(l, (void *) elm);
 }
 
 static void
 listAdd(UtilList * ul, const void *elm)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   add_to_beginning(l, (void *) elm);
 }
 
 static void    *
 listGetFirst(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   reset_to_beginning(l);
   return first_in_list(l);
 }
@@ -629,56 +631,56 @@ listGetFirst(UtilList * ul)
 static void    *
 listGetLast(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return last_in_list(l);
 }
 
 static void    *
 listGetNext(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return next_in_list(l);
 }
 
 static void    *
 listGetPrevious(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return previous_in_list(l);
 }
 
 static void    *
 listGetCurrent(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return current_in_list(l);
 }
 
 static void    *
 listRemoveFirst(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return remove_from_beginning(l);
 }
 
 static void    *
 listRemoveLast(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return remove_from_end(l);
 }
 
 static void    *
 listRemoveCurrent(UtilList * ul)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return remove_current(l);
 }
 
 static void    *
 listRemoveThis(UtilList * ul, void *elm)
 {
-  Generic_list    l = *(Generic_list *) & ul->hdl;
+  Generic_list    l = GENERIC_LIST_HEAD(ul);
   return remove_from_list(l, elm);
 }
 
