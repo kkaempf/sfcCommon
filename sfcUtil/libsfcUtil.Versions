@@ -3,6 +3,10 @@ SFCUTIL_1.0 {
         newHashTable;
         newHashTableDefault;
         newStringBuffer;
+	invalid_int;
+	invalid_uint;
+	invalid_real;
+	invalid_boolean;
     local:
         *;
 };

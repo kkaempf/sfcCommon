@@ -47,6 +47,7 @@ libsfcUtil_la_SOURCES = \
 	sfcUtil/utilFactory.c \
 	sfcUtil/utilHashtable.c \
 	sfcUtil/utilStringBuffer.c \
+	sfcUtil/utilTypeCk.c \
 	sfcUtil/libsfcUtil.Versions
 libsfcUtil_la_LDFLAGS = -Wl,--version-script,$(srcdir)/sfcUtil/libsfcUtil.Versions
 
