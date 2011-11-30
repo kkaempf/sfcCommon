@@ -1,3 +1,9 @@
+2011-11-30  Narasimha Sharoff  <nsharoff@us.ibm.com>
+
+	* Makefile.am, sfcUtil/utilTypeCk.c, 
+          sfcUtil/libsfcUtil.Versions - added utilTypeCk.c
+        [3556179] Add a feature to validate CMPI types
+
 2011-05-09  Chris Buccella  <buccella@linux.vnet.ibm.com>
 
 	* Makefile.am, configure.ac, sfcUtil/utilFactory.c, 
