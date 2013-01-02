@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 
-AC_INIT(sblim-sfcCommon, 1.0.0, sblim-devel@lists.sourceforge.net, sblim-sfcCommon)
+AC_INIT(sblim-sfcCommon, 1.0.1, sblim-devel@lists.sourceforge.net, sblim-sfcCommon)
 AC_CONFIG_HEADER([config.h])
 
 AM_INIT_AUTOMAKE
